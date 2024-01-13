@@ -24,12 +24,15 @@ public class Simulation {
 
     public void startSimulation() {
         List<Entity> entityList = new ArrayList<>();
+
         entityList.add(new Grass('#', "Grass1"));
         entityList.add(new Grass('#', "Grass2"));
         entityList.add(new Grass('#', "Grass3"));
+
         entityList.add(new Tree('!', "Tree1"));
         entityList.add(new Tree('!', "Tree2"));
         entityList.add(new Tree('!', "Tree3"));
+
         entityList.add(new Rock('*', "Rock1"));
         entityList.add(new Rock('*', "Rock2"));
 
@@ -37,13 +40,17 @@ public class Simulation {
         entityList.add(new Predator('@', "Predator1", 54, 100));
 
         map = new Map(entityList, 10, 10);
-        isRunning = true;
+        map.initField();
+
+        renderer = new Renderer(map);
+        renderer.render();
+
+        while (isRunning) {
+        }
     }
 
     public void nextTurn() {
-        renderer = new Renderer(map);
 
-        renderer.render(isRunning);
     }
 
     public void pauseSimulation() {

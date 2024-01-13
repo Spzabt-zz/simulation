@@ -9,9 +9,7 @@ public class Renderer {
         this.map = map;
     }
 
-    public void render(boolean isRunning) {
-        while(isRunning) {
-            // do render
-        }
+    public void render(int x, int y, char entity) {
+        map.getField()[x][y] = entity;
     }
 }

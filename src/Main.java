@@ -24,19 +24,44 @@ public class Main {
         entityList.add(new Grass('#', "Grass1"));
         entityList.add(new Grass('#', "Grass2"));
         entityList.add(new Grass('#', "Grass3"));
+
         entityList.add(new Tree('!', "Tree1"));
         entityList.add(new Tree('!', "Tree2"));
         entityList.add(new Tree('!', "Tree3"));
+
         entityList.add(new Rock('*', "Rock1"));
         entityList.add(new Rock('*', "Rock2"));
 
         entityList.add(new Herbivore('&', "Herbivore1", 34, 100));
+
         entityList.add(new Predator('@', "Predator1", 54, 100));
 
         for (Entity entity : entityList) {
-            System.out.println(entity.getName());
+            System.out.println("Entity: " + entity.getName() + ", Symbol: " + entity.getSkin());
+
+            if (entity instanceof Creature creature) {
+                // Perform Creature-specific actions or access Creature-specific methods
+                if (creature instanceof Herbivore herbivore) {
+                    System.out.println("Health: " + herbivore.getHp());
+                    herbivore.makeMove();
+                } else if (creature instanceof Predator predator) {
+                    System.out.println("Strength: " + predator.getSpeed());
+                    predator.makeMove();
+                    predator.attack();
+                }
+            } else if (entity instanceof Tree tree) {
+                System.out.println(tree.getName());
+
+            }
         }
 
-
+        Map map = new Map(null, 10, 50);
+        map.initField();
+        for (int i = 0; i < map.getField().length; i++) {
+            for (int j = 0; j < map.getField()[i].length; j++) {
+                System.out.print(map.getField()[i][j]);
+            }
+            System.out.println();
+        }
     }
 }

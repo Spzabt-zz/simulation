@@ -18,6 +18,16 @@ public class Map {
 
     public void initField() {
         field = new char[rows][cols];
+
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (i == 0 || i == field.length - 1) {
+                    field[i][j] = '#';
+                } else if (j == 0 || j == field[i].length - 1) {
+                    field[i][j] = '#';
+                } else field[i][j] = '.';
+            }
+        }
     }
 
     public char[][] getField() {
