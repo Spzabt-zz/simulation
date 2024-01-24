@@ -1,5 +1,6 @@
 package renderer;
 
+import entities.Entity;
 import map.Map;
 
 public class Renderer {
@@ -9,7 +10,7 @@ public class Renderer {
         this.map = map;
     }
 
-    public void render(int x, int y, char entity) {
-        map.getField()[x][y] = entity;
+    public void render(int x, int y, Entity entity) {
+        map.getField()[x][y] = entity.getSkin();
     }
 }

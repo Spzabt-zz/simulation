@@ -43,9 +43,14 @@ public class Simulation {
         map.initField();
 
         renderer = new Renderer(map);
-        renderer.render();
+        //renderer.render();
 
         while (isRunning) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
