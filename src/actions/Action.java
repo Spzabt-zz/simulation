@@ -1,5 +1,7 @@
 package actions;
 
+import map.Map;
+
 public interface Action {
-    void performAction();
+    void performAction(Map map);
 }

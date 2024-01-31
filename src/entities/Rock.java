@@ -1,7 +1,9 @@
 package entities;
 
+import map.Position;
+
 public class Rock extends Entity {
-    public Rock(char skin, String name) {
-        super(skin, name);
+    public Rock(String skin, String name, Position position) {
+        super(skin, name, position);
     }
 }

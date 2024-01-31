@@ -1,12 +1,33 @@
 package entities;
 
+import map.Position;
+
+import java.util.Random;
+
 public class Herbivore extends Creature {
-    public Herbivore(char skin, String name, int speed, int hp) {
-        super(skin, name, speed, hp);
+    private final Random random;
+
+    public Herbivore(String skin, String name, int speed, int hp, Position position) {
+        super(skin, name, speed, hp, position);
+        random = new Random();
     }
 
     @Override
     public void makeMove() {
-        System.out.println("Herbivore is moving");
+        int x = random.nextInt(-1, 2);
+        int y = random.nextInt(-1, 2);
+
+        int x1 = getPosition().getX() + x;
+        int y1 = getPosition().getY() + y;
+
+        while ((x1 <= 0 || x1 >= 9) || (y1 <= 0 || y1 >= 9)) {
+            x1 = getPosition().getX() + random.nextInt(-1, 2);
+            y1 = getPosition().getY() + random.nextInt(-1, 2);
+        }
+
+        setPosition(new Position(
+                x1,
+                y1
+        ));
     }
 }

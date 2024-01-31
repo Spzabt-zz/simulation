@@ -1,11 +1,13 @@
 package entities;
 
+import map.Position;
+
 public abstract class Creature extends Entity {
     private int speed;
     private int hp;
 
-    protected Creature(char skin, String name, int speed, int hp) {
-        super(skin, name);
+    protected Creature(String skin, String name, /*int x, int y, */int speed, int hp, Position position) {
+        super(skin, name, position);
         this.speed = speed;
         this.hp = hp;
     }

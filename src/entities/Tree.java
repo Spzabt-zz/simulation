@@ -1,7 +1,9 @@
 package entities;
 
+import map.Position;
+
 public class Tree extends Entity {
-    public Tree(char skin, String name) {
-        super(skin, name);
+    public Tree(String skin, String name, Position position) {
+        super(skin, name, position);
     }
 }
