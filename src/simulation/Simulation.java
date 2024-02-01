@@ -47,6 +47,8 @@ public class Simulation {
         entityList.add(new Rock("0", "Rock2", new Position(4, 8)));
 
         entityList.add(new Herbivore("&", "Herbivore1", 34, 100, new Position(5, 5)));
+        entityList.add(new Herbivore("&", "Herbivore2", 34, 100, new Position(5, 5)));
+        entityList.add(new Herbivore("&", "Herbivore3", 34, 100, new Position(5, 5)));
         entityList.add(new Predator("$", "Predator1", 54, 100, new Position(7, 6)));
 
         map = new Map(entityList, 10, 10);

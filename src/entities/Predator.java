@@ -31,7 +31,11 @@ public class Predator extends Creature {
         ));
     }
 
-    public void attack() {
-        System.out.println("Predator attacks");
+    public void attack(Herbivore herbivore) {
+        if (Math.abs(getPosition().getX() - herbivore.getPosition().getX()) <= 2 &&
+                Math.abs(getPosition().getY() - herbivore.getPosition().getY()) <= 2) {
+            System.out.println("Near collision detected!");
+            herbivore.setHp(herbivore.getHp() - 10);
+        }
     }
 }

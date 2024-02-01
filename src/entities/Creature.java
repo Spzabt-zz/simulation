@@ -14,6 +14,10 @@ public abstract class Creature extends Entity {
 
     public abstract void makeMove();
 
+    public boolean isAlive() {
+        return hp > 0;
+    }
+
     public int getSpeed() {
         return speed;
     }

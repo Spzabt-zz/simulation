@@ -29,5 +29,7 @@ public class Herbivore extends Creature {
                 x1,
                 y1
         ));
+
+        System.out.println(getName() + " left with " + getHp() + " hp");
     }
 }
