@@ -39,17 +39,17 @@ public class Simulation {
         entityList.add(new Grass("~", "Grass2", new Position(1, 2)));
         entityList.add(new Grass("~", "Grass3", new Position(3, 4)));
 
-        entityList.add(new Tree("!!", "Tree1", new Position(2, 8)));
+        /*entityList.add(new Tree("!!", "Tree1", new Position(2, 8)));
         entityList.add(new Tree("!!", "Tree2", new Position(7, 2)));
         entityList.add(new Tree("!!", "Tree3", new Position(6, 1)));
 
         entityList.add(new Rock("0", "Rock1", new Position(4, 4)));
-        entityList.add(new Rock("0", "Rock2", new Position(4, 8)));
+        entityList.add(new Rock("0", "Rock2", new Position(4, 8)));*/
 
-        entityList.add(new Herbivore("&", "Herbivore1", 34, 100, new Position(5, 5)));
-        entityList.add(new Herbivore("&", "Herbivore2", 34, 100, new Position(5, 5)));
-        entityList.add(new Herbivore("&", "Herbivore3", 34, 100, new Position(5, 5)));
-        entityList.add(new Predator("$", "Predator1", 54, 100, new Position(7, 6)));
+        entityList.add(new Herbivore("&", "Herbivore1", 34, 100, new Position(9, 9)));
+        //entityList.add(new Herbivore("&", "Herbivore2", 34, 100, new Position(5, 5)));
+        //entityList.add(new Herbivore("&", "Herbivore3", 34, 100, new Position(5, 5)));
+        //entityList.add(new Predator("$", "Predator1", 54, 100, new Position(7, 6)));
 
         map = new Map(entityList, 10, 10);
         map.initField();

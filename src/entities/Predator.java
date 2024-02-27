@@ -32,8 +32,8 @@ public class Predator extends Creature {
     }
 
     public void attack(Herbivore herbivore) {
-        if (Math.abs(getPosition().getX() - herbivore.getPosition().getX()) <= 2 &&
-                Math.abs(getPosition().getY() - herbivore.getPosition().getY()) <= 2) {
+        if (Math.abs(getPosition().getX() - herbivore.getPosition().getX()) <= 1 &&
+                Math.abs(getPosition().getY() - herbivore.getPosition().getY()) <= 1) {
             System.out.println("Near collision detected!");
             herbivore.setHp(herbivore.getHp() - 10);
         }

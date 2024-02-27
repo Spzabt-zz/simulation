@@ -32,4 +32,12 @@ public class Herbivore extends Creature {
 
         System.out.println(getName() + " left with " + getHp() + " hp");
     }
+
+    public void eatGrass(Grass grass) {
+        if (getPosition().getX() == grass.getPosition().getX() &&
+                getPosition().getY() == grass.getPosition().getY()) {
+            System.out.println("Grass and herbivore collided!");
+            setHp(getHp() + 5);
+        }
+    }
 }
