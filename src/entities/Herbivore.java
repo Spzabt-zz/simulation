@@ -13,7 +13,7 @@ public class Herbivore extends Creature {
     }
 
     @Override
-    public void makeMove() {
+    public void makeMove() {/*
         int x = random.nextInt(-1, 2);
         int y = random.nextInt(-1, 2);
 
@@ -30,7 +30,9 @@ public class Herbivore extends Creature {
                 y1
         ));
 
-        System.out.println(getName() + " left with " + getHp() + " hp");
+        System.out.println(getName() + " left with " + getHp() + " hp");*/
+
+
     }
 
     public void eatGrass(Grass grass) {
